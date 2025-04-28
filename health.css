@@ -1,0 +1,404 @@
+/* Reset margin and padding for all elements */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set the font for the entire page */
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+/* Navbar styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4A878F;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10; 
+}
+@media (max-width: 768px) {
+    /* Stack navigation items on smaller screens */
+    nav ul {
+        flex-direction: column;  
+    }
+}
+
+/* Navigation list styling */
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-inline: 22px;
+}
+
+nav ul :hover {
+    transform: translateY(3px) scale(1.1); /* Moves the card up more and enlarges it significantly */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1); /* Stronger shadow for a more noticeable lift */
+    background-color: #201E43;
+}
+
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center; /* Aligns the image and text vertically */
+ }
+ 
+ .logo img {
+    height: 70px; /* Set the height of the logo */
+    width: 70px; /* Set the width of the logo */
+    margin-right: 20px; /* Adds some space between the logo and text */
+    animation: rotateImage 10s infinite linear; 
+ }
+ @keyframes rotateImage {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg); /* Initial position */
+    }
+    50% {
+        transform: rotateY(180deg) rotateX(10deg); /* Rotate halfway */
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(0deg); /* Full rotation */
+    }
+}
+
+ .logo h1{
+    font-size: 50px;
+ }
+ 
+
+
+/* Main section styles */
+.main {
+    padding: 33px;
+    height: 100vh; /* Adjusted to viewport height */
+    margin-top: 80px; /* Ensures the main section is below the navbar */
+}
+
+/* Text container for main content */
+.maintext {
+    color: white;
+    text-align: left;  /* Aligns the text to the left */
+    margin-left: 120px; 
+    margin-top: 180px;   /* Remove any left margin */
+    padding-left: 100px;   /* Remove any left padding */
+}
+
+/* Heading styles */
+.maintext h1 {
+    font-size: 66px;
+    margin-bottom: 10px;  /* Adjust spacing between h1 and p */
+}
+
+/* Paragraph styling */
+.maintext p {
+    margin-top: 22px;
+    font-size: 28px;  /* Optional: You can change the font size for better readability */
+}
+
+/* Button styling */
+.maintext button {
+    margin-top: 22px;
+    width: 140px;
+    height: 40px;
+    background-color: #201E43;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;  /* Adds a pointer cursor on hover */
+}
+/* Animation for text */
+/* Animation for main text */
+.maintext {
+    animation: fadeInPop 2.5s ease-out forwards; /* Adds fade-in with a slight pop effect */
+}
+
+/* Keyframes for the text animation */
+@keyframes fadeInPop {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.85); /* Starts from below and small */
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0) scale(1.05); /* Scales up slightly larger than normal */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Ends at normal size and position */
+    }
+}
+
+/* Button animation */
+.maintext button {
+    opacity: 0;
+    animation: buttonPop 1s ease-out forwards;
+    animation-delay: 1.5s; /* Adds a delay so the button appears after the text */
+}
+.maintext button:hover {
+    transform: translateY(-30px) scale(1.2); /* Moves the card up more and enlarges it significantly */
+    box-shadow: 0 30px 60px rgba(1, 1, 1, 0.7); /* Stronger shadow for a more noticeable lift */
+   
+   
+  background-color:  #E82561;
+   
+}
+
+/* Keyframes for button animation */
+@keyframes buttonPop {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9); /* Starts from below and smaller */
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0) scale(1.1); /* Scales up slightly */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Ends at normal size and position */
+    }
+}
+
+.head {
+    text-align: center;
+    padding: 88px;
+    font-size: 25px;
+    
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.service .serviceCarde {
+    display: flex;            /* Use flexbox to position items inside the card */
+    flex-direction: column;   /* Stack elements (image, text, button) vertically */
+    justify-content: space-between;  /* Ensures the button is pushed to the bottom */
+    height: 400px;
+    width: 500px;
+    padding: 22px;
+    border: 3px solid black;
+    margin: 40px;
+    text-align: center;       /* Ensures text below the image is centered */
+    cursor: pointer;
+}
+
+.serviceCarde:hover {
+    background-color: rgb(0, 74, 98);
+}
+
+.service .serviceCarde img {
+    margin-left: 70px;
+    width: 70%;   /* Makes the image responsive inside the card */
+    height: 350px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    margin-bottom: 10px; /* Adds spacing between image and text */
+}
+
+.service .serviceCarde p {
+    font-size: 30px;
+}
+
+.serviceCarde:hover {
+    transform: translateY(-30px) scale(1.2); /* Moves the card up more and enlarges it significantly */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); /* Stronger shadow for a more noticeable lift */
+}
+
+.serviceCarde button {
+    width: 140px;
+    height: 40px;
+    background-color: #201E43;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;  /* Adds a pointer cursor on hover */
+}
+
+.counselors{
+    width: 930px;
+    height: 550px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+
+}
+.team{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    transition: all 1.5s ease;
+}
+.team img {
+    width: 350px; /* Keeps your original width for larger screens */
+    height: 350px; /* Keeps the original height */
+    object-fit: cover; /* Ensures images cover the allocated space without distortion */
+    margin-inline: 20px; /* Keeps your margin as before */
+}
+
+
+
+.blogs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  /* Ensures the cards wrap on smaller screens */
+    height: auto;
+}
+.blogCard{
+    padding: 18px;
+    width: 400px; /* Original size for larger screens */
+    background-color: rgb(0, 74, 98);
+    text-align: center;
+    color: white;
+    height: 450px;
+    margin-inline: 20px;
+    margin-top: 22px;
+    box-sizing: border-box; 
+}
+@media (max-width: 768px) {
+    .blogCard {
+        width: 100%; /* Makes the blog card width 100% on smaller screens */
+        height: auto; /* Adjusts the height accordingly */
+    }
+}
+.blogCard img{
+    margin-top: 40px;
+    width: 100%;
+    height: 310px;
+    
+}
+.blogCard a{
+    padding: 5px 15px;
+    background-color: rgb(30, 6, 68);
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+}
+.blogCard:hover {
+    transform: translateY(-30px) scale(1.1); /* Moves the card up more and enlarges it significantly */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); /* Stronger shadow for a more noticeable lift */
+    /* background-color:rgb(0, 74, 98) ; */
+    background-color: #00879E;
+   
+}
+.form{
+    width: 90%; /* Make it more flexible */
+    max-width: 600px; /* Keep it from growing too wide on larger screens */
+    text-align: center;
+    margin: auto;
+    background-color: #edecec;
+    height: auto; /* Make height flexible */
+    padding: 22px;
+    border: 6px solid black;
+}
+.form input{
+    width: 90%;
+    font-size: 20px;
+    padding: 11px;
+    margin-top: 22px;
+}
+.form textarea{
+    width: 90%;
+    font-size: 20px;
+    padding: 11px;
+    margin-top: 22px;
+
+}
+.form button{
+    width: 140px;
+    height: 40px;
+    background-color: rgb(30, 6, 68);
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin-top: 22px ;
+}
+.form button:hover {
+    transform: translateY(5px) scale(1.1); /* Moves the card up more and enlarges it significantly */
+    box-shadow: 0 30px 60px rgba(1, 1, 1, 0.7); /* Stronger shadow for a more noticeable lift */
+   
+   
+  background-color:  #00879E;
+   
+}
+footer{
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    background-color: hsl(187, 32%, 43%);
+    min-height: 300px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+footer .social_icon li{
+    list-style: none;
+}
+footer .social_icon li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5px;
+    background: transparent;
+    
+}
+footer .social_icon li a:hover{
+    transform: translateY(-10px);
+    background: transparent; 
+}
+footer .social_icon li img{
+    height: 60px;
+    width: 60px;
+    margin-right:20px ;
+    background-color:none;
+}
+footer h1{
+    font-size: 60px;
+}
+footer p{
+    font-size: 25px;
+}

@@ -1,0 +1,203 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4A878F;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the screen */
+    background-color: #f4f4f4; /* Optional: background color for better visibility */
+}
+
+/* Navigation list styling */
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-inline: 22px;
+}
+
+nav ul :hover {
+    transform: translateY(3px) scale(1.1); /* Moves the card up more and enlarges it significantly */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1); /* Stronger shadow for a more noticeable lift */
+    background-color: #201E43;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center; /* Aligns the image and text vertically */
+}
+
+.logo img {
+    height: 70px; /* Set the height of the logo */
+    width: 70px; /* Set the width of the logo */
+    margin-right: 20px; /* Adds some space between the logo and text */
+    animation: rotateImage 10s infinite linear; 
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg); /* Initial position */
+    }
+    50% {
+        transform: rotateY(180deg) rotateX(10deg); /* Rotate halfway */
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(0deg); /* Full rotation */
+    }
+}
+
+.logo h1 {
+    font-size: 50px;
+}
+
+/* General Body Styles */
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+   padding: 0;
+   justify-content: center; /* Center the content horizontally */
+   align-items: center; /* Center the content vertically */
+   min-height: 100vh; /* Ensures the body takes up at least the full height of the screen */
+   background-color: #f4f4f4; /* Optional: background color for better visibility */
+}
+
+.accordion {
+    margin-top: 25%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    width: 100%;
+    background: #fff;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0,05);
+}
+
+.accordion h2 {
+    margin: 10px 2px 25px;
+    font-size: 30px;
+    color: #111;
+}
+
+.accordion .item {
+    margin: 15px 0px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion > div:nth-child(2) {
+    background-color: #e8eef5;
+    border-left: 4px solid #21b1ea;
+}
+.accordion > div:nth-child(3) {
+    background-color: #f5e8e8;
+    border-left: 4px solid #eaa421;
+}
+.accordion > div:nth-child(4) {
+    background-color: #e8eef5;
+    border-left: 4px solid #21b1ea;
+}
+.accordion > div:nth-child(5) {
+    background-color: #f5e8e8;
+    border-left: 4px solid #eaa421;
+}
+.accordion > div:nth-child(6) {
+    background-color: #e8eef5;
+    border-left: 4px solid #21b1ea;
+}
+.accordion > div:nth-child(7) {
+    background-color: #f5e8e8;
+    border-left: 4px solid #eaa421;
+}
+.accordion > div:nth-child(8) {
+    background-color: #e8eef5;
+    border-left: 4px solid #21b1ea;
+}
+.accordion > div:nth-child(9) {
+    background-color: #f5e8e8;
+    border-left: 4px solid #eaa421;
+}
+.accordion > div:nth-child(10) {
+    background-color: #e8eef5;
+    border-left: 4px solid #21b1ea;
+}
+.accordion > div:nth-child(11) {
+    background-color: #f5e8e8;
+    border-left: 4px solid #eaa421;
+}
+
+.accordion .item .question {
+    position: relative;
+    padding: 10px 0px;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+}
+
+.accordion .item .question::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #555;
+    transition: all 300ms ease-in-out;
+}
+
+.accordion .item .answer {
+    font-size: 20px;
+    color: #222;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300m linear;
+}
+
+.accordion .item .answer > * {
+    margin: 5px 40px 15px;
+}
+
+.accordion .item .active .question:before {
+    transform: translate(-50%, -50%) rotate(145deg);
+}
+
+.accordion .item.active .answer {
+    max-height: 1000px; 
+}

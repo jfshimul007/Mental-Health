@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 
+
+/* Navbar styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4A878F;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10; 
+}
+
+/* Navigation list styling */
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-inline: 22px;
+}
+
+nav ul :hover {
+    transform: translateY(3px) scale(1.1); 
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1); 
+    background-color: #201E43;
+}
+
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center; 
+ }
+ 
+ .logo img {
+    height: 70px; 
+    width: 70px; 
+    margin-right: 20px; 
+    animation: rotateImage 10s infinite linear; 
+
+ }
+ @keyframes rotateImage {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg); 
+    }
+    50% {
+        transform: rotateY(180deg) rotateX(10deg); 
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(0deg);
+    }
+}
+ .logo h1{
+    font-size: 50px;
+ }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.poem-section {
+    background-color: #F0F4F8;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.poem-section h1 {
+    font-size: 32px;
+    color: #3F72AF;
+    margin-bottom: 20px;
+}
+
+.poem-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.poem-section img.poem-image {
+    width: 70%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 450px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.poem-section.bottom {
+    margin-top: 60px;
+}
+
+.books-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.books-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #3F72AF;
+}
+
+.book-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 600px;
+}
+
+.book-card {
+    display: flex;            
+    flex-direction: column;   
+    justify-content: space-between;  
+    height: 600px;
+    width: 500px;
+    padding: 22px;
+    border: 3px solid black;
+    margin: 40px;
+    text-align: center;       
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+.book-card img {
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 70%;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 5px; 
+}
+
+.book-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;  
+    padding-top: 0; 
+}
+.book-card button {
+    width: 140px;
+    height: 40px;
+    background-color: #201E43;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .poem-section h1 {
+        font-size: 28px;
+    }
+
+    .poem-section p {
+        font-size: 16px;
+    }
+
+    .book-card {
+        padding: 10px;
+    }
+
+    .book-card h3 {
+        font-size: 18px;
+    }
+}
+footer{
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    background-color: hsl(187, 32%, 43%);
+    min-height: 300px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+footer .social_icon li{
+    list-style: none;
+}
+footer .social_icon li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5px;
+    background: transparent;
+    
+}
+footer .social_icon li a:hover{
+    transform: translateY(-10px);
+    background: transparent; 
+}
+footer .social_icon li img{
+    height: 60px;
+    width: 60px;
+    margin-right:20px ;
+    background-color:none;
+}
+footer h1{
+    font-size: 60px;
+}
+footer p{
+    font-size: 25px;
+}
